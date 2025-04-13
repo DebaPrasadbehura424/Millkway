@@ -15,17 +15,18 @@ function Devai() {
 
   const refs = useRef(null);
   async function generateAnswer() {
-    const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCzp3lsYWvpuWpKGY4lrpQjHGMrAvbSO7Q",
-      method: "post",
-      data: {
-        contents: [
-          {
-            parts: [{ text: `${question}` }],
-          },
-        ],
-      },
-    });
+    // const response = await axios({
+    //   url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCzp3lsYWvpuWpKGY4lrpQjHGMrAvbSO7Q",
+    //   method: "post",
+    //   data: {
+    //     contents: [
+    //       {
+    //         parts: [{ text: `${question}` }],
+    //       },
+    //     ],
+    //   },
+    // }
+    // );
     setQuestion("");
     setAnswer(response.data.candidates[0].content.parts[0].text);
     setFrame([

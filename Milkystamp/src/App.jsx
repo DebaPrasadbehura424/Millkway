@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
-import Devai from "./Componenets/Devilai/Devai";
+import { Route, Routes } from "react-router-dom";
+// import Devai from "./Componenets/Devilai/Devai";
 import Home from "./Componenets/Home";
 import Notfound from "./Componenets/Notfound";
 import Btech from "./Pages/AllNote/Btech";
@@ -19,17 +19,6 @@ import Tictactoe from "./Gamepage/TTT/Tictactoe";
 import DinoApp from "./Gamepage/DinoGame/DinoApp";
 import QuizApp from "./Gamepage/QuizTime/QuizApp";
 import Mainquizz from "./Gamepage/QuizTime/Mainquizz";
-
-
-
-
-
-
-
-
-
-
-
 
 function App() {
   return (
@@ -50,17 +39,14 @@ function App() {
       <Route path="/fourthyearCse" element={<Fourthyear />} />
       {/* cse all path */}
 
-
       {/*  if page not exist */}
       <Route path="/*" element={<Notfound />} />
       {/*  if page not exist */}
 
-
       {/* ai,games here */}
-      <Route path="/Devai" element={<Devai />} />
+      {/* <Route path="/Devai" element={<Devai />} /> */}
       <Route path="/games" element={<Games />} />
       {/* ai,games here */}
-
 
       {/* all games real path */}
       <Route path="/ticstacs" element={<Tictactoe />} />
@@ -69,14 +55,8 @@ function App() {
       <Route path="/mainquizz" element={<Mainquizz />} />
 
       {/* all games real path */}
-
-
-
-
-
-
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

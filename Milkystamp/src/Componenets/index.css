@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* not found container */
+
+
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.not-found-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.not-found-text {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.not-found-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: #337ab7;
+  transition: color 0.2s;
+}
+
+.not-found-link:hover {
+  color: #23527c;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* games */
+
+.games_container {
+
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+
+}
+
+.games_subcontinent {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.games_subcontinent button {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bolder;
+  border: none;
+
+}
+
+.games_photocontainer {
+  width: 100%;
+  height: 80%;
+}
+
+.games_photocontainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.games_subcontinent p {
+  font-family: cursive;
+  font-weight: bold;
+
+}
+
+
+
+
+/* index.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Full height for body */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-image: url('../Asserts/Phonewall.jpg'); /* Background image */
+  background-size: cover; /* Cover entire area */
+  background-position: center; /* Center the image */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  position: relative; /* For child positioning */
+}
+
+.main_contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  justify-content: center; /* Center items */
+  z-index: 1; /* Ensure content is above background */
+}
+
+h1 {
+  font-size: 4rem; /* Large heading */
+  margin: 20px 0; /* Space around heading */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+}
+
+button {
+  padding: 15px 30px; /* Button padding */
+  font-size: 1.5rem; /* Button text size */
+  background-color: rgba(52, 152, 219, 0.8); /* Blue background with transparency */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: rgba(41, 128, 185, 0.9); /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 3rem; /* Smaller heading on mobile */
+  }
+
+  button {
+      font-size: 1.2rem; /* Smaller button text size */
+      padding: 10px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2.5rem; /* Further reduce heading size */
+  }
+
+  button {
+      font-size: 1rem; /* Smaller button text size */
+      padding: 8px 15px; /* Adjust padding */
+  }
+
+
+
+}
+
+/* index.css */
+
+.explore-button {
+  padding: 15px 30px; /* Button padding */
+  font-size: 1.5rem; /* Button text size */
+  background-color: black; /* Black background */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.explore-button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly lighter on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+

@@ -1,0 +1,245 @@
+/* Quiz.css */
+
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center the buttons */
+    gap: 15px; /* Space between buttons */
+}
+
+.language {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 16px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 300px; /* Limit button width */
+}
+
+.html {
+    background-color: #e34c26; /* HTML color */
+}
+
+.css {
+    background-color: #1572B6; /* CSS color */
+}
+
+.javascript {
+    background-color: #f7df1e; /* JavaScript color */
+    color: black; /* Black text for contrast */
+}
+
+.react {
+    background-color: #61dafb; /* React color */
+    color: black; /* Black text for contrast */
+}
+
+.cpp {
+    background-color: #f34b7d; /* C++ color */
+}
+
+.java {
+    background-color: #007396; /* Java color */
+}
+
+.python {
+    background-color: #3776AB; /* Python color */
+}
+
+.language:hover {
+    opacity: 0.9; /* Slight opacity change on hover */
+}
+
+.language:active {
+    transform: scale(0.95);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .language {
+        max-width: 90%; /* Allow buttons to take more width on small screens */
+    }
+}
+
+
+
+
+
+
+
+.quiz-container {
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: auto;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .quiz-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .quiz-title {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .quiz-divider {
+    border: none;
+    height: 2px;
+    background: #007bff;
+    margin: 20px 0;
+  }
+  
+  .quiz-question {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+  }
+  
+  .quiz-options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quiz-option {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quiz-option:hover {
+    transform: scale(1.02);
+  }
+  
+  .quiz-button {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition:  transform 0.2s;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .quiz-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .quiz-indexes {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #777;
+    text-align: center;
+  }
+
+
+
+.correct{
+    border:1px solid green ;
+    background-color: rgba(0, 128, 0, 0.514);
+}
+ .wrong{
+    border:1px solid red ;
+    background-color: rgba(255, 0, 0, 0.585);
+  }
+  
+  /* Animation for fading in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .quiz-title {
+      font-size: 2.5em;
+    }
+    
+    .quiz-question {
+      font-size: 1.5em;
+    }
+    
+    .quiz-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1em;
+    }
+    
+    .quiz-indexes {
+      font-size: 0.9em;
+    }
+  }
+
+
+
+  
+  .result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000; /* Ensure it is above other elements */
+    text-align: center;
+  }
+  
+  .result-title {
+    font-size: 24px;
+    color: #ff5722;
+  }
+  
+  .result-score {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .animate {
+    animation: pop-up 0.5s ease forwards; /* Animation for the popup */
+  }
+  
+  @keyframes pop-up {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Existing styles for timer and options */
+  
+  

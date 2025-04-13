@@ -1,0 +1,262 @@
+/* index.css */
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh; /* Use full viewport height */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34; /* Dark background for contrast */
+}
+
+.tical {
+    display: flex;
+    color: #ffcc00; /* Bright yellow text */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url("https://media.istockphoto.com/id/474753372/vector/forest.jpg?s=612x612&w=0&k=20&c=DNdL0UVl_8CppTR3BJyVVBvFTdc0rqXyKZW5AWypAh4=");
+    height: 100vh;
+    width: 100vw;
+}
+
+.pop_up {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+    background-color: rgba(247, 220, 111, 0.9); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pop_up:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background-color: #FFD700; /* Gold */
+    border-radius: 15px; /* Match with pop_up */
+    z-index: -1;
+}
+
+.pop_up:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFC107; /* Amber */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.pop_up div {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.pop_up label {
+    font-weight: bold;
+    color: #008000; /* Green */
+}
+
+.pop_up input[type="text"] {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+}
+
+.choose_format {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.three, .five {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    display: grid;
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+.three {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.five {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.three div, .five div {
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.7); /* Light background for tiles */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.three div:hover, .five div:hover {
+    background-color: rgba(255, 215, 0, 0.7); /* Gold on hover */
+}
+
+.wars {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+    font-size: 25px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    cursor: pointer;
+    position: relative;
+    font-family: 'Cursive', sans-serif;
+}
+
+.boardsec {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    cursor: pointer;
+    position: relative;
+    font-family: 'Cursive', sans-serif;
+}
+
+.tile {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 5px solid #fff;
+    background-size: cover;
+    background-image: url("https://t3.ftcdn.net/jpg/01/69/83/36/360_F_169833636_K0rpNa68keobmQrDhEUn1nbFcy8cmfCw.jpg");
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+.tile:hover {
+    transform: scale(1.1); /* Slightly scale on hover */
+}
+
+.buttons {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wincontent {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    color: #000;
+    font-size: 30px;
+    background-color: #ff7b00; /* Orange */
+    border-radius: 10px;
+}
+
+.buttons button {
+    width: 200px;
+    height: 50px;
+    background-color: #4B804C; /* Dark green */
+    border-radius: 10px; /* More rounded */
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.buttons button:hover {
+    background-color: #6FAF6B; /* Lighter green on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+.strike {
+    position: absolute;
+    background-color: #0040ff; /* Blue */
+}
+
+.strike-row-1,
+.strike-row-2,
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+}
+
+.strike-row-1 {
+    top: 15%;
+}
+
+.strike-row-2 {
+    top: 49%;
+}
+
+.strike-row-3 {
+    top: 82%;
+}
+
+.strike-col-1,
+.strike-col-2,
+.strike-col-3 {
+    width: 100%;
+    height: 4px;
+    top: 49%;
+}
+
+.strike-col-1 {
+    left: -33%;
+    transform: rotate(90deg);
+}
+
+.strike-col-2 {
+    transform: rotate(-45deg);
+}
+
+.strike-col-3 {
+    left: 33%;
+    transform: rotate(90deg);
+}
+
+.strike-dai-1,
+.strike-dai-2 {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+}
+
+.strike-dai-1 {
+    transform: rotate(45deg);
+}
+
+.strike-dai-2 {
+    transform: rotate(-45deg);
+}

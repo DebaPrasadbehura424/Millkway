@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +23,6 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.184);
   gap: 100px;
-
-
 }
 
 .main_contain button {
@@ -44,8 +44,7 @@
 .main_contain h1 {
   font-weight: bold;
   font-size: 70px;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .logo {
@@ -56,8 +55,6 @@
   align-items: center;
   justify-content: center;
   top: 0%;
-
-
 }
 
 .Rectriangle {
@@ -103,9 +100,8 @@
     top: 10%;
     border: none;
     background-color: transparent;
-    animation: Chakara infinite linear 30s ;
+    animation: Chakara infinite linear 30s;
   }
-
 }
 
 .bar:nth-child(1) {
@@ -115,7 +111,7 @@
   background-color: white;
   position: absolute;
   top: 48%;
-  border-radius: 20px ;
+  border-radius: 20px;
 }
 .bar:nth-child(2) {
   width: 80px;
@@ -124,7 +120,7 @@
   background-color: white;
   position: absolute;
   top: 48%;
-  border-radius: 20px ;
+  border-radius: 20px;
   left: 57%;
 }
 .bar:nth-child(3) {
@@ -136,13 +132,13 @@
   top: 19%;
   left: 29%;
   transform: rotate(90deg);
-  border-radius: 20px ;
+  border-radius: 20px;
 }
 .bar:nth-child(4) {
   width: 80px;
   height: 2px;
   padding: 3px;
-  border-radius: 20px ;
+  border-radius: 20px;
   background-color: white;
   position: absolute;
   top: 77%;
@@ -150,9 +146,7 @@
   transform: rotate(90deg);
 }
 
-
 @keyframes Chakara {
-
   from {
     transform: rotate(0deg);
   }
@@ -160,6 +154,4 @@
   to {
     transform: rotate(360deg);
   }
-
-
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import photos from "../../Asserts/Phonewall2.png";
 import Logo from "../../Componenets/Logo.jsx";
-
 function MainBar() {
   const navigate = useNavigate();
 

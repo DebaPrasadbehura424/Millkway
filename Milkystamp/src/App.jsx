@@ -5,7 +5,7 @@ import Home from "./Componenets/Home";
 import Notfound from "./Componenets/Notfound";
 import Btech from "./Pages/AllNote/Btech";
 import FreeNote from "./Pages/AllNote/FreeNote";
-import MainBar from "./Pages/Homebar/MainBar";
+// import MainBar from "./Pages/Homebar/MainBar";
 import Civil from "./Pages/Stream/Civil";
 import Cse from "./Pages/Stream/Cse";
 import Ee from "./Pages/Stream/Ee";
@@ -24,7 +24,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/mainbar" element={<MainBar />} />
+      {/* <Route path="/mainbar" element={<MainBar />} /> */}
       <Route path="/freenote" element={<FreeNote />} />
       <Route path="/btech" element={<Btech />} />
       <Route path="/cse" element={<Cse />} />

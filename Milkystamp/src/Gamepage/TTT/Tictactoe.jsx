@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Board from "./Board";
 import { GameState } from "./GameState";
 import "./index.css";
-import { RiSwordFill } from "react-icons/ri";
-import { GiSwordwoman } from "react-icons/gi";
+
 import BoardSec from "./BoardSec";
 
 const player_x = "X";
@@ -277,12 +276,10 @@ function Tictactoe() {
 
       <div className="wars">
         <div style={{ color: "red" }}>
-          <GiSwordwoman /> {value1} {cnt1}
+          {value1} {cnt1}
         </div>
-        <RiSwordFill color="#230020" fontSize={"50px"} />
         <div style={{ color: "Yellow" }}>
           {" "}
-          <GiSwordwoman />
           {value2} {cnt2}
         </div>
       </div>

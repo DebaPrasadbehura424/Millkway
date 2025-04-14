@@ -1,11 +1,7 @@
-import gsap from "gsap";
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import ai from "../../Asserts/Ai.avif";
-import Allnote from "../../Asserts/Allnotes.jpg";
 import photos from "../../Asserts/Phonewall2.png";
-import games from "../../Asserts/Tictac.png";
-import Logo from "../../Componenets/Logo";
+import Logo from "../../Componenets/Logo.jsx";
 
 function MainBar() {
   const navigate = useNavigate();
@@ -22,27 +18,28 @@ function MainBar() {
       <div className="w-full mb-30 px-4 z-10 flex justify-center">
         <div className="flex gap-5 bg-white/10 backdrop-blur-md p-2 mb-5 rounded-2xl shadow-lg max-w-md w-full justify-center">
           <div
-            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg overflow-hidden flex flex-col items-center justify-center gap-1 shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
             onClick={() => navigate("/freenote")}
           >
-            <img src={Allnote} alt="notes" className="w-10 h-10 object-cover" />
-            <p className="text-white text-xs sm:text-sm font-semibold">NOTES</p>
+            <p className="text-white text-sm sm:text-base font-semibold">
+              NOTES
+            </p>
           </div>
 
           <div
-            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg overflow-hidden flex flex-col items-center justify-center gap-1 shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
             onClick={() => navigate("/games")}
           >
-            <img src={games} alt="games" className="w-10 h-10 object-cover" />
-            <p className="text-white text-xs sm:text-sm font-semibold">GAMES</p>
+            <p className="text-white text-sm sm:text-base font-semibold">
+              GAMES
+            </p>
           </div>
 
           <div
-            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg overflow-hidden flex flex-col items-center justify-center gap-1 shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="app w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center shadow-md hover:scale-105 transition-all duration-300 cursor-pointer"
             onClick={() => navigate("/Devai")}
           >
-            <img src={ai} alt="ai" className="w-10 h-10 object-cover" />
-            <p className="text-white text-xs sm:text-sm font-semibold">
+            <p className="text-white text-sm sm:text-base font-semibold">
               DEV.AI
             </p>
           </div>

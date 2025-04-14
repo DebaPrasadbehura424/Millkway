@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { CounterContext } from '../../context/Contextapi';
-import './Quiz.css'; 
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { CounterContext } from "../../context/Contextapi";
+import "./Quiz.css";
 
 function Mainquizz() {
   const counterState = useContext(CounterContext);
@@ -18,13 +18,12 @@ function Mainquizz() {
 
   let optionArry = [option1, option2, option3, option4];
 
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          handleNext(); 
+          handleNext();
           return 30;
         }
         return prev - 1;
@@ -34,25 +33,20 @@ function Mainquizz() {
     return () => clearInterval(timer);
   }, [index]);
 
-
-
-
-
-
   const handleNext = () => {
     setLock(false);
-    setTimeLeft(30); 
+    setTimeLeft(30);
     if (index < counterState.data.length - 1) {
       const newIndex = index + 1;
       setIndex(newIndex);
       setQuestion(counterState.data[newIndex]);
-    }else{
+    } else {
       setGameover(false);
     }
     optionArry.forEach((e) => {
       if (e.current) {
-        e.current.classList.remove('correct');
-        e.current.classList.remove('wrong');
+        e.current.classList.remove("correct");
+        e.current.classList.remove("wrong");
       }
     });
   };
@@ -60,47 +54,89 @@ function Mainquizz() {
   const checkAnswer = (e, ans) => {
     if (lock === false) {
       if (question.ans === ans) {
-        e.target.classList.add('correct');
+        e.target.classList.add("correct");
         setLock(true);
-        setCorrect(prev => prev + 1);
+        setCorrect((prev) => prev + 1);
       } else {
-        e.target.classList.add('wrong');
-        optionArry[question.ans - 1].current.classList.add('correct');
+        e.target.classList.add("wrong");
+        optionArry[question.ans - 1].current.classList.add("correct");
         setLock(true);
       }
-      clearInterval(); 
-      // setTimeLeft(30); 
+      clearInterval();
+      // setTimeLeft(30);
     }
   };
 
   return (
     <>
-    {
-      gameOver==true?
-      <div className="quiz-container">
-        <h1 className="quiz-title">{timeLeft}: MILKY BITE</h1>
-        <hr className="quiz-divider" />
-        <h2 className="quiz-question">{index + 1}. {question.question}</h2>
-        <ul className="quiz-options">
-          <li className="quiz-option" onClick={(e) => { checkAnswer(e, 1) }} ref={option1}>{question.option1}</li>
-          <li className="quiz-option" onClick={(e) => { checkAnswer(e, 2) }} ref={option2}>{question.option2}</li>
-          <li className="quiz-option" onClick={(e) => { checkAnswer(e, 3) }} ref={option3}>{question.option3}</li>
-          <li className="quiz-option" onClick={(e) => { checkAnswer(e, 4) }} ref={option4}>{question.option4}</li>
-        </ul>
-        <div className="timer">{timeLeft} seconds left</div>
-        <button className="quiz-button" onClick={handleNext}>NEXT</button>
-        <button className="quiz-button" onClick={()=>setGameover(false)}>STOP</button>
-        <div className="quiz-indexes">{index + 1} of {counterState.data.length} questions</div>
-      </div>
-      : 
-      <div className="result-popup animate">
-          <h2 className="result-title">Game Over!</h2>
-          <div className="result-score">{correct}/{index+1} Correct</div>
+      {gameOver == true ? (
+        <div className="quiz-container">
+          <h1 className="quiz-title">{timeLeft}: MILKY BITE</h1>
+          <hr className="quiz-divider" />
+          <h2 className="quiz-question">
+            {index + 1}. {question.question}
+          </h2>
+          <ul className="quiz-options">
+            <li
+              className="quiz-option"
+              onClick={(e) => {
+                checkAnswer(e, 1);
+              }}
+              ref={option1}
+            >
+              {question.option1}
+            </li>
+            <li
+              className="quiz-option"
+              onClick={(e) => {
+                checkAnswer(e, 2);
+              }}
+              ref={option2}
+            >
+              {question.option2}
+            </li>
+            <li
+              className="quiz-option"
+              onClick={(e) => {
+                checkAnswer(e, 3);
+              }}
+              ref={option3}
+            >
+              {question.option3}
+            </li>
+            <li
+              className="quiz-option"
+              onClick={(e) => {
+                checkAnswer(e, 4);
+              }}
+              ref={option4}
+            >
+              {question.option4}
+            </li>
+          </ul>
+          <div className="timer">{timeLeft} seconds left</div>
+          <div className="flex gap-2 items-center ">
+            <button className="quiz-button " onClick={handleNext}>
+              NEXT
+            </button>
+            <button className="quiz-button" onClick={() => setGameover(false)}>
+              STOP
+            </button>
+          </div>
+          <div className="quiz-indexes">
+            {index + 1} of {counterState.data.length} questions
+          </div>
         </div>
-    }
+      ) : (
+        <div className="result-popup animate">
+          <h2 className="result-title">Game Over!</h2>
+          <div className="result-score">
+            {correct}/{index + 1} Correct
+          </div>
+        </div>
+      )}
     </>
-    
-  )
+  );
 }
 
 export default Mainquizz;

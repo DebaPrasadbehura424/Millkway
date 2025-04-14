@@ -9,7 +9,9 @@ function Home() {
     <div className="container" style={{ backgroundImage: `url(${photo})` }}>
       <Logo />
       <div className="main_contain">
-        <button style={{ color: "black" }}>EXPLORE.a</button>
+        <NavLink to="/quizapp">
+          <button style={{ color: "black" }}>EXPLORE.a</button>
+        </NavLink>
         <h1 style={{ color: "white" }}>MILKYWAY</h1>
       </div>
     </div>

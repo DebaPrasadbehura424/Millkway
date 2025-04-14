@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { PiMicrophoneStageThin } from "react-icons/pi";
 import "./index.css";
 
